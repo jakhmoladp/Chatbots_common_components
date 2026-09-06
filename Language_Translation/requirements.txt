@@ -1,0 +1,41 @@
+# Everything needed to run the full app (all six modules).
+#
+# To work on ONE module in isolation, install only that module's file instead:
+#   pip install -r modules/<module_name>/requirements.txt
+#
+# ---------------------------------------------------------------------------
+# TWO PREREQUISITES FOR MODULES 4 AND 5 (IndicTrans2). Both are one-off.
+#
+#   1. Microsoft C++ Build Tools -- IndicTransToolkit has no Windows wheel and
+#      compiles from source. Install the "Desktop development with C++"
+#      workload from:
+#      https://visualstudio.microsoft.com/visual-cpp-build-tools/
+#
+#   2. A Hugging Face account -- the IndicTrans2 models are gated. Accept the
+#      terms on both model pages, then `huggingface-cli login`.
+#
+# Modules 1, 2, 3 and 6 need neither and install cleanly on their own.
+# ---------------------------------------------------------------------------
+
+# Module 1 -- Streamlit UI
+streamlit>=1.57.0
+
+# Module 2 -- Speech to text
+faster-whisper>=1.0.3
+
+# Module 3 -- Language detection
+langdetect>=1.0.9
+
+# Modules 4 and 5 -- IndicTrans2 translation (shared dependencies)
+transformers>=4.40.0
+torch>=2.2.0
+sentencepiece>=0.2.0
+sacremoses>=0.1.1
+IndicTransToolkit>=1.1.1
+huggingface-hub>=0.23.0
+
+# Module 6 -- Text to voice
+gTTS>=2.5.0
+
+# Tests
+pytest>=8.0.0

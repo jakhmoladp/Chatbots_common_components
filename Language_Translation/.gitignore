@@ -1,0 +1,18 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Downloaded model weights land here; they are large and reproducible.
+.cache/
+models/
+
+# Generated audio
+*.mp3
+!samples/*.mp3
+samples/output/
+
+.streamlit/secrets.toml
+.env
+.DS_Store
