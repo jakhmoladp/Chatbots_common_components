@@ -1,0 +1,3 @@
+# Module 3 -- Language detection. Install standalone with:
+#   pip install -r modules/language_detection/requirements.txt
+langdetect>=1.0.9
